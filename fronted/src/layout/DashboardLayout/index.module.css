@@ -1,0 +1,121 @@
+/* ============================
+   GLOBAL LAYOUT WRAPPER
+   ============================ */
+.homeContainer {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f2ef;
+  justify-content: center;
+  gap: 0;
+  padding-top: 20px;
+}
+
+/* ============================
+   LEFT SIDEBAR
+   ============================ */
+.homeContainer_leftBar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  padding: 12px 8px;
+  position: sticky;
+  top: 72px;
+  height: fit-content;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  margin-right: 16px;
+  align-self: flex-start;
+}
+
+/* SIDEBAR OPTION */
+.sideBarOption {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+  gap: 12px;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.sideBarOption svg {
+  height: 20px;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.sideBarOption:hover {
+  background-color: #eef3f8;
+  color: #0a66c2;
+}
+
+/* ============================
+   CENTER FEED
+   ============================ */
+.homeContainer__feedContainer {
+  flex: 1;
+  max-width: 560px;
+  /* NO overflow-y so page scrolls naturally */
+  padding: 0;
+}
+
+/* ============================
+   RIGHT SIDEBAR
+   ============================ */
+.homeContainer__extraContainer {
+  width: 300px;
+  padding: 0;
+  margin-left: 16px;
+  align-self: flex-start;
+  position: sticky;
+  top: 72px;
+  height: fit-content;
+}
+
+.homeContainer__extraContainer h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 14px 16px 10px;
+  margin: 0;
+  border-bottom: 1px solid #e0ddd8;
+  background: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.extraContainer_profilefetched {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border-top: 1px solid #f0eeeb;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.extraContainer_profilefetched:last-child {
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.extraContainer_profilefetched:hover {
+  background: #f5f4f0;
+}
+
+.extraContainer_profilefetched p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.8);
+  margin: 0;
+}

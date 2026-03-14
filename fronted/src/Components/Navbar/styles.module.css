@@ -1,0 +1,62 @@
+/* Main Navbar Container */
+.container {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Logo Section */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0077b5;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* Middle Navigation Section */
+.navItems {
+  display: flex;
+  gap: 30px;
+}
+
+/* Individual Nav Item */
+.navItem {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+.navItem:hover {
+  color: #0077b5;
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+/* Logout Button */
+.logout {
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout:hover {
+  text-decoration: underline;
+}

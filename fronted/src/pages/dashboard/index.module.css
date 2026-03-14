@@ -1,0 +1,273 @@
+/* ============================
+   CREATE POST CARD
+   ============================ */
+.createPostComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 16px 10px;
+  margin-bottom: 16px;
+}
+
+.postInputWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ============================
+   USER PROFILE AVATAR
+   ============================ */
+.userProfile {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.defaultAvatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #c9d5e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #55697a;
+  flex-shrink: 0;
+}
+
+.defaultAvatar svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* ============================
+   TEXTAREA
+   ============================ */
+.textAreaContent {
+  flex: 1;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  resize: none;
+  font-size: 15px;
+  padding: 10px 14px;
+  outline: none;
+  background-color: #ffffff;
+  border-radius: 24px;
+  min-height: 42px;
+  max-height: 140px;
+  overflow-y: auto;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.9);
+  transition: border-color 0.2s ease;
+}
+
+.textAreaContent:focus {
+  border-color: #0a66c2;
+}
+
+.textAreaContent::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 500;
+}
+
+/* ============================
+   POST ACTIONS ROW
+   ============================ */
+.uploadLabel {
+  display: inline-flex;
+  cursor: pointer;
+  margin-left: 52px; /* offset for avatar width + gap */
+}
+
+.favSection {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.favSection:hover {
+  background-color: #eef3f8;
+  color: #0a66c2;
+}
+
+.favSection svg {
+  width: 22px;
+  height: 22px;
+  color: #378fe9;
+}
+
+/* ============================
+   POST BUTTON
+   ============================ */
+.postButton {
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: auto;
+  transition: background-color 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.postButton:hover {
+  background-color: #004182;
+}
+
+/* ============================
+   PHOTO PREVIEW STRIP
+   ============================ */
+.previewStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 4px 52px; /* align with textarea */
+}
+
+.previewThumb {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.previewThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.removeThumb {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.removeThumb:hover {
+  background: #c0392b;
+}
+
+/* ============================
+   POSTS FEED
+   ============================ */
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ============================
+   SINGLE POST CARD
+   ============================ */
+.singleCard {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  transition: box-shadow 0.15s ease;
+}
+
+.singleCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.singleCard_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   DELETE BUTTON
+   ============================ */
+.deleteButton {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.4);
+  transition: background 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.deleteButton:hover {
+  background-color: #fdecea;
+  color: #c0392b;
+}
+
+.deleteButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.singleCard_header h4 {
+  margin: 0 0 2px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.postTime {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.postBody {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
+  padding-left: 2px;
+}
+
+.singleCard_image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.singleCard_image > img {
+  flex: 1 1 calc(50% - 6px);
+  min-width: 120px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}

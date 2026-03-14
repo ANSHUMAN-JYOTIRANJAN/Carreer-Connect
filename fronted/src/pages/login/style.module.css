@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: snow;
+}
+
+.cardContainer {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardContainer__left {
+  flex: 0.6;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardContainer__right {
+  flex: 0.4;
+  background: #709227;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cardleft__heading {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputRow .inputfield {
+  flex: 1;
+}
+
+.inputfield {
+  padding: 0.8rem 1.2rem;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid silver;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+.inputfield:focus {
+  border-color: #709227;
+}
+
+.button {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background: #709227;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+  }
+
+  .cardContainer__left,
+  .cardContainer__right {
+    width: 100%;
+    flex: none;
+  }
+
+  .inputRow {
+    flex-direction: column;
+  }
+}
