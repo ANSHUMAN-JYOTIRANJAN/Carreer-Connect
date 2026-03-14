@@ -1,0 +1,64 @@
+###
+POST http://localhost:8000/register 
+Content-Type: application/json
+
+{
+    "username": "anshulsinghvi",
+    "password": "anshulpassword",
+    "email": "anshul@example.com",
+    "name": "Anshul Singhvi"
+}
+
+###
+POST http://localhost:8000/login 
+Content-Type: application/json
+
+{
+    "email": "anshul@example.com",
+    "password": "anshulpassword"
+}
+
+###
+POST http://localhost:8000/user_update
+Content-Type: application/json
+
+{
+    "token": "ebf46876f75c7aac31b1cd33f2e84844f64469a6ea3f200f1e0a778a4f1e8a4b",
+    "name": "Anshul Singhvi",
+    "email": "anshul@example.com",
+    "username": "anshulsinghvi"
+}
+
+###
+GET http://localhost:8000/get_user_and_profile?token=ebf46876f75c7aac31b1cd33f2e84844f64469a6ea3f200f1e0a778a4f1e8a4b
+Content-Type: application/json
+
+###
+POST http://localhost:8000/update_profile_data 
+Content-Type: application/json
+
+{
+    "token" : "ebf46876f75c7aac31b1cd33f2e84844f64469a6ea3f200f1e0a778a4f1e8a4b",
+    "bio": "I am a software developer",
+    "currentPost": "CEO",
+    "postWork" : [
+        {
+            "company" : "Micropost",
+            "position" :" Software Developer",
+            "startDate" : "2020"
+        }
+    ],
+    "education" : [
+        {
+            "school" : "IIT",
+            "degree" : "B.Tech",
+            "fieldOfStudy" : "Computer Science"
+        }
+    ]
+}
+
+###
+GET http://localhost:8000/get_all_profiles 
+Content-Type: application/json
+
+
